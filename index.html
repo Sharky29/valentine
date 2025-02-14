@@ -1,0 +1,146 @@
+    <!DOCTYPE html>
+    <html>
+        
+        <head></head>
+        <style>
+            body {
+                background: rgb(255, 255, 255);
+                color: white;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .ButtonYes {
+                transition: 0.5s all ease;
+                width: 5%;
+                height: 47.5px;
+                background-color: rgb(66, 255, 88);
+                font-size: 150%;
+                border-radius: 7px;
+                border: 0px;
+            }
+            .ButtonYes:hover {
+                transition: 0.5s all ease;
+                background-color: rgb(51, 182, 67);
+            }
+            .ButtonNo {
+                transition: 0.5s all ease;
+                width: 5%;
+                height: 47.5px;
+                background-color: rgb(255, 19, 19);
+                font-size: 150%;
+                border-radius: 7px;
+                border: 0px;
+                margin-left: 1.25%;
+            }
+            .ButtonNo:hover {
+                transition: 0.5s all ease;
+                background-color: rgb(192, 18, 18);
+            }
+
+            h1 {
+                color: rgb(0, 0, 0);
+                font-size: 100;
+                position: fixed;
+                top: 41%;
+                left: 38.5%;
+            }
+            .bear {
+                transition: 0.5s all ease;
+                position: fixed;
+                width: 15%; height: 23.5%;
+                position: fixed;
+                top: 20%;
+                left: 40%;
+                
+            }
+            
+            
+
+            @media only screen and (max-width: 1640px ) {
+                h1 {
+                    top: 41%;
+                    left: 34%;
+                }
+            }
+
+            @media only screen and (max-width: 1150px ){
+                .ButtonNo {
+                    width: 7%;
+                }
+                .ButtonYes {
+                    width: 7%;
+                }
+                .bear {
+                    width: 18.5%;
+                    height: 16.5%;
+                    left: 39.5%;
+                    top: 26.5%;
+                }
+                h1 {
+                    top: 41%;
+                    left: 33%;
+                }
+                .YesImage {
+                    width: 18.5%;
+                    height: 16.5%;
+                    left: 39.5%;
+                    top: 26.5%;
+                }
+            }
+
+            div {
+                position: fixed;
+                top: 50%;
+                left: 44%;
+                width: 70%;
+                margin-top: 0;
+            }
+
+            .YesImage {
+                display: none;
+                transition: 0.5s all ease;
+                position: fixed;
+                width: 12%; height: 23.5%;
+                position: fixed;
+                top: 20%;
+                left: 43%;
+            }
+
+
+        </style>
+        <body>
+            <ul>
+                <div class="maindiv" id="maindiv">
+                <img class="bear" id="bear" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"><img>  
+            <div class="div" id="div"><button class="ButtonYes" id="ButtonYes" >Yes</button>
+                <button class="ButtonNo" id="ButtonNo">No</button></div></div>
+                <img class="YesImage" id="YesImage" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtaDF2dnNlMDBrOHB3Yzkzc21kYmxzaGRocmdxZnQ0cDdocHduYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qFmdpUKAFZ6rMobzzu/giphy.gif"><img>
+                <h1 id="h1">Will you be my valentine?</h1>
+            </ul>
+            <script>
+                const NoButton = document.getElementById("ButtonNo");
+                
+                const YesButton = document.getElementById("ButtonYes")
+
+                const maindiv = document.getElementById("maindiv")
+
+                const secondmaindiv = document.getElementById("YesImage")
+
+                const h1 = document.getElementById("h1")
+
+                YesButton.addEventListener("click",function(e) {
+                maindiv.style.display = "none"
+                secondmaindiv.style.display = "block"
+                h1.textContent = "WOOOO!!! I love you pookie!! :3"
+                h1.style.left = "36.25%"
+                })
+
+                NoButton.addEventListener("click", function(e) {
+                YesButton.style.width = YesButton.clientWidth * 1.25 + "px"
+                YesButton.style.height = YesButton.clientHeight * 1.25 + "px"
+                YesButton.style.fontSize = YesButton.style.fontSize.valueOf * 1.25 + "px"
+                });
+            </script>
+        </body>
+    </html>
